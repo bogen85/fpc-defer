@@ -30,6 +30,6 @@ Study the code (`fpcdefer.pas` and `main.pas`) then execute `make run`
 
 # Notes
 
-- The `.anchor` method must be used to make sure the deferred code is not called to early.
-- It needs to be placed at the end of scope it is intended to be used in
+- The `.anchor` method must be used to make sure the deferred code is not called too early.
+- It needs to be placed at the end of scope it is intended to be used in, at the earliest point the deferred code can be called.
 - See [this comment and subsequent replies](https://forum.lazarus.freepascal.org/index.php/topic,55154.msg460637.html#msg460637) that discuss this issue.
