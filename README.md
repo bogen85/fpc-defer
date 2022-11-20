@@ -4,8 +4,8 @@ Defer mechanism for Free Pascal
 See [Topic: Defer Mechanism for FreePascal](https://forum.lazarus.freepascal.org/index.php?topic=55154) in the Lazarus forums.
 
 So if someone is looking for something akin to `defer` from other languages:
-[`defer` in `V`](https://github.com/vlang/v/blob/master/doc/docs.md#defer)
-[`defer` in `go`](https://golangbot.com/defer)
+- [`defer` in `V`](https://github.com/vlang/v/blob/master/doc/docs.md#defer)
+- [`defer` in `go`](https://golangbot.com/defer)
 
 That can be approximated in Free Pascal.
 
