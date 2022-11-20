@@ -40,8 +40,8 @@ For ease of use, you can name that variable `defer`.
 You then can use `defer` to add function references to a `LIFO` list.
 
 Both of these do the same thing
-- defer.x := some function reference
-- defer.add(some function reference)
+- `defer.x := some function reference`
+- `defer.add(some function reference)`
 
 You can do `defer.x := @some_global_procedure` and it will work as expected.
 
