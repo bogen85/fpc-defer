@@ -67,7 +67,11 @@ type
 
       // this is fine, but may not work with smart pointers if
       // already freed due to forced reference count decrement
-      defer.add(@something.hello);
+      defer.x := @something.hello;
+
+      // Both of these do the same thing
+      // defer.x := some function reference
+      // defer.add(some function reference)
 
       something.hello;
 
@@ -82,7 +86,8 @@ type
         writeln('Last added runs first! y=', y);
       end;
 
-      defer.add(tDeferProc(@deferred));
+      // type cast needed because deferred is a local function
+      defer.x := tDeferProc(@deferred);
       writeln('Hello, World!');
       writeln(format('y : %d', [y]));
       defer.anchor;
