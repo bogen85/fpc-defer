@@ -47,6 +47,11 @@ type
       inherited;
     end;
 
+  procedure goodbye;
+    begin
+      writeln('Goodbye!');
+    end;
+
   procedure main;
     var
       defer:     tDefer;
@@ -60,6 +65,7 @@ type
       end;
 
     begin
+      defer.x   := @goodbye;
       something := tSomeClass.create('procastination 101');
 
       // should really use a smart pointer for freeing, this is an example only

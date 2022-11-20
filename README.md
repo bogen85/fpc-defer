@@ -32,7 +32,41 @@ Options for installing FPC 3.3.1:
 
 Study the code (`fpcdefer.pas` and `main.pas`) then execute `make run`
 
-# Notes
+Create a variable of type `tDefer` in the function you need to defer something.
+For ease of use, you can name that variable `defer`.
+
+`var defer: tDefer;`
+
+You then can use `defer` to add function references to a `LIFO` list.
+
+Both of these do the same thing
+- defer.x := some function reference
+- defer.add(some function reference)
+
+You can do `defer.x := @some_global_procedure` and it will work as expected.
+
+You can also use a local procedure and it will work as expected, but you must cast it.
+
+`defer.x := tDeferProc(@some_local_procedure)`
+
+You can also use an anonymous function as the function reference.
+
+```pas
+defer.x := procedure
+begin
+	writeln('Some anonymous function...');
+end;
+```
+
+Place `defer.anchor` at the bottom of the function, before it's last `end;`
+
+When the `defer` goes out of scope, all the functions in the `LIFO` list will be called.
+
+`LIFO`, as in, `Last in`, `First out`, meaning:
+- The last function reference added will be called first.
+- The first function reference added will be called last.
+
+## Notes
 
 - The `.anchor` method must be used to make sure the deferred code is not called too early.
 - It needs to be placed at the end of scope it is intended to be used in, at the earliest point the deferred code can be called.
