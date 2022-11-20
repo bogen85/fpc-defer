@@ -38,7 +38,6 @@ uses
       defer.x := tDeferProc(@deferred);
       writeln('Hello, World!');
       writeln(format('y : %d', [y]));
-      exit;
       defer.anchor;
     end;
 
