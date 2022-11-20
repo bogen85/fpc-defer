@@ -24,6 +24,10 @@ Reason:
 
 These are used so that code using `defer` can access data in their parent scope.
 
+Options for installing FPC 3.3.1:
+- [FPCUPdeluxe](https://wiki.freepascal.org/fpcupdeluxe)
+- [Building FPC from sources using git or zip](https://wiki.lazarus.freepascal.org/Installing_the_Free_Pascal_Compiler#FPC_sources_Using_Git_or_Zip)
+
 # To use
 
 Study the code (`fpcdefer.pas` and `main.pas`) then execute `make run`
