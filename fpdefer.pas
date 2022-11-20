@@ -7,7 +7,7 @@
 {$modeswitch functionreferences}
 {$modeswitch advancedrecords}
 
-unit defer;
+unit fpdefer;
 
 interface
 

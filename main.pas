@@ -9,7 +9,7 @@
 program main;
 
 uses
-  defer,
+  fpdefer,
   sysutils;
 
   procedure main;

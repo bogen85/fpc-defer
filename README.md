@@ -26,7 +26,7 @@ These are used so that code using `defer` can access data in their parent scope.
 
 # To use
 
-Study the code (`defer.pas` and `main.pas`) then execute `make run`
+Study the code (`fpdefer.pas` and `main.pas`) then execute `make run`
 
 # Notes
 
