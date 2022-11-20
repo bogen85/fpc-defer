@@ -63,11 +63,11 @@ type
       something := tSomeClass.create('procastination 101');
 
       // should really use a smart pointer for freeing, this is an example only
-      defer.x := @something.free;
+      defer.add(@something.free);
 
       // this is fine, but may not work with smart pointers if
       // already freed due to forced reference count decrement
-      defer.x := @something.hello;
+      defer.add(@something.hello);
 
       something.hello;
 
@@ -82,7 +82,7 @@ type
         writeln('Last added runs first! y=', y);
       end;
 
-      defer.x := tDeferProc(@deferred);
+      defer.add(tDeferProc(@deferred));
       writeln('Hello, World!');
       writeln(format('y : %d', [y]));
       defer.anchor;
