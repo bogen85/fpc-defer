@@ -42,6 +42,8 @@ Basically the `main.pas` example shows what to do:
 - You can do `defer.x := @some_global_procedure` and it will work as expected.
 - You can also use a local procedure and it will work as expected, but you must cast it.
   - `defer.x := tDeferProc(@some_local_procedure)`
+- You can do `defer.x := @some_class_instance.some_procedure_method` and it will work as expected.
+- You can do `defer.x := @some_class_instance.free` and it will work as expected.
 
 ## You can also use an anonymous function as the function reference.
 
