@@ -68,16 +68,17 @@ type
       defer.x   := @goodbye;
       something := tSomeClass.create('procastination 101');
 
+      // Both of these do the same thing
+      //   defer.add(some function reference)
+      //   defer.x := some function reference
+
       // should really use a smart pointer for freeing, this is an example only
       defer.add(@something.free);
 
       // this is fine, but may not work with smart pointers if
-      // already freed due to forced reference count decrement
+      //   already freed due to forced reference count decrement
+      //   smart pointer finalize was called first and already freed it
       defer.x := @something.hello;
-
-      // Both of these do the same thing
-      // defer.x := some function reference
-      // defer.add(some function reference)
 
       something.hello;
 
