@@ -66,6 +66,8 @@ Place `defer.anchor` at the bottom of the function, before it's last `end;`
 ## Notes
 
 - The `.anchor` method must be used to make sure the deferred code is not called too early.
+  - In and of itself, the `.anchor` method does nothing.
+  - The `.anchor` method is an empty placeholder.
 - It needs to be placed either:
   - At the end of scope it is intended to be used in.
   - At the earliest point the deferred code can be called.
